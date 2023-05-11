@@ -20,5 +20,11 @@
 
   function sayHelloProgrammer(Programmer $programmer)
   {
-    echo "Hello $programmer->name" . PHP_EOL;
+    if($programmer instanceof BackendProgrammer){
+      echo "Hello BackendProgrammer $programmer->name" . PHP_EOL;
+    }else if($programmer instanceof FrontendProgrammer){
+      echo "Hello FrontendProgrammer $programmer->name" . PHP_EOL;
+    }else if($programmer instanceof Programmer){
+      echo "Hello Programmer $programmer->name" . PHP_EOL;
+    }
   }
