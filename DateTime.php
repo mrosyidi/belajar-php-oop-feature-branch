@@ -7,3 +7,9 @@
   $minusOneMonth->invert = true;
   $dateTime->add($minusOneMonth);
   var_dump($dateTime);
+
+  $now = new DateTime();
+  var_dump($now);
+
+  $now->setTimezone(new DateTimeZone("Asia/Jakarta"));
+  var_dump($now);
